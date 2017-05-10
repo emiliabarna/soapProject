@@ -1,0 +1,435 @@
+* {box-sizing:border-box}
+
+body {
+      font-family: 'Handlee', cursive;
+      margin:0;
+      padding:0;
+      height:100%;
+}
+#container{
+     min-height:100%;
+     position:relative;
+     height:100%;
+     font-family: 'Handlee', cursive;
+}
+
+#header{
+   padding:10px;
+    margin: 10px;
+    text-align: right;
+    margin-right: 100px;
+    height: 70px;
+    font-family: 'Handlee', cursive;
+}
+#body-div{
+ padding:10px;
+   padding-bottom:60px; 
+   font-family: 'Handlee', cursive;
+}
+
+#footer {
+   background-color: #333;
+   position:fixed;
+   bottom:0;
+   width:100%;
+   height:60px;
+   font-family: 'Shadows Into Light', cursive;
+}
+#banner {
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 400px;
+    font-size: 60px; 
+}
+.logoImg {
+    height: 130px;
+    width: 130px;
+    float: left;
+    margin-left: 100px;
+}
+.reg-container{
+  position:absolute;
+  margin-left:1230px;
+  margin-top:90px;
+  height:30px;
+}
+.login{
+  display:none;
+  margin: 250px 0 0 300px;
+  background-color:white;
+ margin-bottom: 60px;
+}
+.registration{
+  display:none;
+  margin: 250px 0 0 300px;
+  background-color:white;
+ margin-bottom: 60px;
+}
+#sendDatas:hover{
+  background-color:#fcfa76;
+}
+#sendRegDatas{
+  background-color:#fcfa76;
+}
+
+.menu-container{
+  padding-top:150px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width:1380px;
+
+}
+
+li {
+    float: left;
+    width: 230px;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    height: 84px;
+    width:230px;
+}
+
+li a:hover, .dropdown:hover, li a:focus{
+    background-color: #2ef470;
+    color: black;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#soapSorter {
+  display:none;
+  float:right;
+  margin-right:275px;
+  margin-top: 200px;
+  font-size: 15px;
+}
+.sorterBtn{
+width: 250px;
+}
+
+.sorterBtn:hover{
+  background-color:#5af4a7;
+}
+
+#finishBuying{
+  display: block;
+  margin-top: 2850px;
+  margin-bottom:60px;
+  margin-left:600px;
+}
+#finishBuyingBtn, #finishBuyingBtn a{
+  height: 40px;
+  font-size: 20px;
+  background-color: #ff496b;
+  text-decoration: none;
+  font-weight: bold;
+  color:black;
+}
+#finishBuyingBtn:hover, #finishBuyingBtn a:hover {
+  color: white;
+}
+
+/* Product container */
+.product-container {
+    margin-top:5px;
+    display: none;
+    height: auto;
+    
+}
+/* Search for products */
+#searchDiv {
+  position: absolute;
+  float:right;
+  margin-top: 250px;
+  margin-left: 160px;
+  padding-bottom: 0;
+  width: 300px;
+}
+#searchInput{
+    width: 100%;
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 1.42857;
+    color: #9c9b9b;
+    vertical-align: middle;
+    background-color: white;
+    border: 1px solid #d6d4d4;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    margin-bottom: 2px;
+}
+#searchButton{
+    background: #333333;
+    top: 0;
+    right: 0;
+    border: none;
+    color: white;
+    width: 50px;
+    text-align: center;
+    padding: 10px 0px 11px 0;
+    margin-right: 10px;
+    content: "keress";
+    border-radius: 4px;
+}
+#searchButton:hover{
+  background-color: #009341;
+}
+
+#deleteButton {
+    background: #333333;
+    top: 0;
+    right: 0;
+    border: none;
+    color: white;
+    width: 50px;
+    text-align: center;
+    padding: 10px 0 11px 0;
+    content: "keress";
+    border-radius: 4px;
+}
+#deleteButton:hover{
+  background-color: #ff496b;
+}
+.item-container {
+    display: inline-block;
+    padding-left: 5%;
+    padding-top: 0%;
+    margin-top: 0px;
+    width: 100%;
+    height: 450px;
+    background-color: white;
+}
+.item {
+    width: 350px;
+    height: 490px;
+    margin: 30px;
+    float: left;
+   
+}
+.item:hover{
+ border-style: groove;
+}
+
+.item h5{
+  text-align: center;
+  font-size:20px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  font-size: 20px;
+  color:#234f1e;
+  cursor:default;
+  
+}
+.item h5:hover{
+  color:black;
+  font-weight: bold;
+}
+.product-button {
+  float:left;
+  margin-left: 30px; 
+  font-size: 15px;
+  border-radius: 2px;
+  height: 30px;
+  width:80px;
+}
+.product-button:hover {
+    margin-left: 30px; 
+    background:#009341;
+    color: #fff;
+    transition: color .3s ease,border-color .3s ease .3s,box-shadow .3s ease .3s;
+}
+.product-price{
+  float: right;
+  margin-right: 30px;
+  font-size: 25px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.flex-item label{
+ margin-left: 30px; 
+ float: left;
+}
+
+.product-num {
+  float:left;
+  margin-top: 5px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  width: 60px;
+}
+.product-q-label{
+  margin-left: 30px;
+  cursor: default;
+}
+.item-basket{
+  margin-top: -10px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  width: 80px;
+  height: 50px;
+ 
+  background-color:#2ef470;
+  
+}
+.item-basket:hover {
+  color: white;
+  transition: color .3s ease,border-color .3s ease .3s,box-shadow .3s ease .3s;
+}
+.product-image{
+  display:block;
+  height: 210px;
+  width: 240px;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#product-description-container {
+  z-index: 1000;
+  display: none;
+  position:fixed;
+  width: 600px;
+  height: 600px;
+  border: solid black 2px;
+  margin-top: 0px;
+  margin-left: 450px ;
+  background-color: white;
+  font-size: 30px;
+}
+.closeDescBtn{
+  float:right;
+  background-color: #ff496b;
+  color: white;
+}
+.item-small-pic-desc{
+  height: 300px;
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom:20px;
+  margin-left:140px;
+}
+#soapSearcher {
+  display: none;
+  margin-top: 20px;
+  padding: 10px;
+}
+#price-container-main{
+  border: black solid 2px;
+  margin-left: 150px;
+  margin-top: 180px;
+  display:none;
+  height: auto;
+  min-height: 500x;
+  width: 1200px;
+  font-size: 30px;  
+  background-color: white;
+  text-align: center;
+
+}
+#backToShopBtn{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+#backToShopBtn:hover {
+ background-color:#9e7496;
+}
+.item-small-pic{
+  width:100px;
+  height: 100px;
+}
+
+.gyik {
+  display: none;
+  margin-top: 200px;
+  margin-left:30px;
+  background-color: white;
+  height: 1100px;
+  width:800px;
+  font-size: 20px;
+  margin-bottom: 300px;
+}
+/* Slideshow container */
+.slideshow-container {
+  font-size: 30px;
+  display: none;
+  margin-top: 200px;
+  margin-left: 480px;
+}
+.homemade-soap-desc{
+  display:none;
+  margin-top: 200px;
+  width:auto;
+  height:auto;
+  text-align:justify;
+  font-size: 20px;
+  color:black
+}
+.mySlides{
+
+  margin-left:50px;
+  height: 40%;
+  width:40%;
+}
+.slideshow-text{
+margin-left:-60px; ;
+}
+#contact{
+   display:none;
+   margin-top:150px;
+   margin-left:300px;
+  height:300px;
+  font-size: 20px;
+  height:800px;
+}
+#map{
+  height:150px;
+  width:150px;
+
+
+}

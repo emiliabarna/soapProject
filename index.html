@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tündérkert szappan</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles/stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Handlee|Shadows+Into+Light" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="header">
+      <img src="images/logo.jpg" class="logoImg">
+      <div id="banner">Tündérkert szappan</div>
+      <div class="reg-container">
+        <button id="login" onclick="login()">Belépés</button>
+        <button id="registration" onclick="registration()">Regisztráció</button>
+      </div>
+      <div class="menu-container">
+        <ul>
+          <li><a href="#home" id="menubutton1" class="menubutton1 dropbtn" onclick="openMenu(event)">Home</a></li>
+          <li><a href="#products" id="menubutton2" class="menubutton2 dropbtn" onclick="openMenu(event)">Termékeink</a></li>
+          <li><a href="#soapsearcher" id="menubutton3" class="menubutton3 dropbtn" onclick="openMenu(event)">Tudnivalók a kézműves szappanokrók</a></li>
+          <li><a href="#basket" id="menubutton4" class="menubutton4 dropbtn" onclick="openMenu(event)">Kosaram</a></li>
+          <li><a href="#gyik" id="menubutton5" class="menubutton5 dropbtn" onclick="openMenu(event)">Webshop tudnivalók</a></li>
+          <li><a href="#contactelement" id="menubutton6" class="menubutton6 dropbtn" onclick="openMenu(event)">Kapcsolat</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="body-div">
+      <div id="soapSorter"> Termékek rendezése
+        <br>
+        <br>
+        <button class="sorterBtn" onclick="sortByNameInc()" id="alphBntInc">Név szerint növekvő sorrendbe</button>
+        <br>
+        <button class="sorterBtn" onclick="sortByNameDec()" id="alphBntDec">Név szerint csökkenő sorrendbe</button>
+        <br>
+        <button class="sorterBtn" onclick="sortByPriceInc()" id="numBntInc">Ár szerint növekvő sorrendbe</button>
+        <br>
+        <button class="sorterBtn" onclick="sortByPriceDec()" id="numBntDec">Ár szerint csökkenő sorrendbe</button>
+      </div>
+
+
+      <div id="searchDiv" class="search">
+        <input type="text" id="searchInput" placeholder="keresés névre, összetételre, illatra.." name="search">
+        <button type="button" id="searchButton" onclick="searchResult(soaps)"> 
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span> 
+        </button>
+        <button type="button" id="deleteButton" onclick="showProducts()"> Vissza 
+        </button>
+      </div>
+      <div id="product-description-container">
+      </div>
+      <div id="product-container" class="product-container">
+      </div>
+
+      <div id="price-container-main"> <br><strong> Kosár tartalma </strong>
+        <div id="price-container"></div>
+      </div>
+
+      <div id="product-container" class="product-container">
+      </div>
+      <div class="gyik">
+        <p>Gyakori kérdések<br>Mennyibe kerül a szállítási költség?<br>Egyes termékeknél a tulajdonságok mellett megtekinthetőek
+          a legkedvezőbb szállítási költségek, továbbá az 'Itt megtekintheti a pontos szállítási költséget!'feliratra kattintva
+          a szállítási díj kalkulátorunkkal kiszámolhatja a pontos összeget.<br>Ezen felül a szállítási költség megtekintése
+          úgy is lehetséges, ha a kiválasztott terméket a kosárba helyezi, ez még semmiféle vásárlási kötelezettséggel nem
+          jár. Ha a kosárban helyezte a terméket és beállította a kívánt mennyiséget, rendszerünk automatikusan kiadja a
+          szállítási költséget. A szállítási költség függ a fizetés módjától is, így választhat az utánvét vagy előreutalás
+          lehetőségek közül. A szállítási költség súly alapú számlázással történik, így az egész ország területére egységes
+          a kiszállítás. <br> Hogyan tudom kifizetni a terméket?<br>A termékek kifizetése több módon is történhet: Előreutalással,
+          utánvéttel, és készpénzzel. Személyese vásárlás esetén lehetősége van bankkártyás és készpénzes fizetésre is. A
+          telefonon, illetve weben leadott rendeléseknél lehetőség van előreutalásra, illetve utánvétre. Utánvét esetén a
+          számlát a szállítás napján kérjük kiegyenlíteni a futárnak készpénzben.<br>Előreutalás esetén milyen bankszámla
+          számra utaljam az összeget?<br>Előreutalás esetén a következő bankszámlaszámra kell utalni az összeget: 11745059-20007511.
+          A kifizetésre kerülő összeget csak abban az esetben utalja el ha már egyeztetett a vevőszolgálati munkatársakkal.
+          Továbbá minden kedves vevőnket megkérünk arra, hogy a pontos összeget utalja el.<br>Mikor szállítják ki a terméket?<br>4.
+          Ez több tényezőtől függ (fizetés módja, raktárkészlet), azonban minden leadott rendelés után felvesszük Önnel a
+          kapcsolatot és telefonon egyeztetjük az Önnek megfelelő időpontot. A szállítást a Magyar Posta Logisztika végzi.<br>Pontosan
+          mikor érkezik meg a termék?<br>Nincs információnk, arról, milyen időpontban érkezik meg a szállító az adott napon
+          a termékkel, viszont a pontos napot egyeztetheti a vevőszolgálati munkatársainkkal.<br> Segít a szállító az árut
+          bevinni a lakásba?<br>A szállítást a Magyar Posta Logisztika végzi, a szállítót rakodásra nem kötelezhetjük, így
+          kérjük Önöket szíveskedjenek gondoskodni a megfelelő segítségről.<br> A számlát minden esetben az áru kézhezvételekor
+          kapja meg.<br>Személyesen is át vehetem a terméket?<br>Természetesen személyesen is át lehet venni a termékeket,
+          ilyen esetekben nincs szállítási költség. Ebben az esetben csak előzetes egyeztetés szükséges. Ezt akár a Vevőszolgálati
+          Chaten is megteheti.<br>Hol tudom személyesen átvenni vagy megnézni a termékeket<br>Budapest, Szentes<br>Az árak
+          tartalmazzák-e az Áfát?<br>Igen, az áraink tartalmazzák az áfát.<br>Az ország egész területére szállítanak?<br>Az
+          ország egész területére kiszállítjuk a termékeket egységes áron, ugyanis súlyalapú a számlázás.<br>Kérdéseimet
+          milyen e-mail címre küldhetem? A következő email címre: vevoszolgalat@tunderkertszappan.hu
+        </p>
+      </div>
+      <div class="login"> <strong>Belépés</strong><br><br>
+        <label for="loginInput">Regisztrált név</label><br>
+        <input type="text" id="loginInput" class="login-class" name="loginInput">
+        <br><br>
+        <label for="password">Jelszó</label><br>
+        <input type="password" id="password" class="login-class" name="passwordInput">
+        <br><br><br>
+        <input type="button" id="sendDatas" class="login-class" value="Belépés" onclick="sendDatas() " name="sendDatas">
+        <br>
+      </div>
+
+      <div class="registration"> <strong>Regisztráció</strong><br><br>
+        <form>
+          <label for="regInput">Regisztrált név</label><br>
+          <input type="text" id="regInput" class="login-class" name="regInput">
+          <br><br>
+          <label for="regpassword">Jelszó</label><br>
+          <input type="text" id="regpassword" class="login-class" name="regpasswordInput">
+          <br><br>
+          <label for="passwordagain">Jelszó mégegyszer</label><br>
+          <input type="text" id="passwordagain" class="login-class" name="regpasswordInput2">
+          <br><br><br>
+          <input type="button" id="sendRegDatas" class="login-class" value="Elküld" onclick="sendregDatas()" name="sendDatas">
+          <br>
+        </form>
+      </div>
+
+      <div class="homemade-soap-desc">
+        Miért jobbak a házi szappanok? Ha ránézünk az összetevők listájára a szappanok címkéin, nagyon hamar, biztonsággal meg tudjuk
+        állapítani, hogy egy szappan kézműves módon készült, vagy nagyüzemi módszerrel. Van néhány árulkodó jel. A szappanokat
+        a gyárakban ugyanis másképp készítik, mint a kézműves műhelyekben.<br> A hatalmas autoklávokban a zsiradékokat
+        nagy nyomáson, magas hőmérsékleten vízgőzzel reagáltatják. Ekkor zsírsavak és glicerin keletkeznek. Lehűlés után
+        a zsírsavakat elválasztják a folyékony glicerintől, majd Nátrium-hidroxiddal reagáltatják őket, hogy szappanmolekulákat
+        kapjanak. A keletkező vizet elpárologtatják, a terméket megőrlik, és kész is a kémiailag tiszta, egynemű szappanforgács.
+        Ezt a reakciót általában nagyon nagy volumenben végzik: egyszerre akár több száz tonna szappanforgács is készülhet.
+        A nagyüzemek ezt a szappant nem mindig dolgozzák fel helyben: a kisebb szappanüzemek szívesen megveszik ezt az alapszappant,
+        hogy pipereszappanokat gyártsanak belőlük. Ők erős keverőgépekben összedolgozzák a színt, illatot, adalékot a készülő
+        termékhez, majd tömbbé sajtolják, és méretre darabolják.<br> Egyes cégek az alapszappant többé-kevésbé természetes
+        összetevőkkel dolgozzák össze, míg mások több mesterséges anyagot használnak, aztán becsomagolják, és mehet a boltba.<br>        Ha tehát megnézzük a különböző cégek által gyártott bolti szappanokat, főként ilyen eljárással gyártott termékeket
+        fogunk találni. Hasonlítsuk nyugodtan össze az olcsóbb és drágább bolti szappanokat, meglepődve fogjuk tapasztalni,
+        hogy összetételük alig különbözik egymástól, legyen az olcsóbb, vagy drágább, természetesnek látszó, vagy kommersz
+        csomagolásban. Ezzel szemben a kézműves szappanokat a zsiradékok és a lúg közvetlen reakciójával készítjük:<br> Az
+        olajokat számolt mennyiségű nátrium-hidroxiddal jól összekeverjük, majd a keveréket színezzük, illatosítjuk, és az
+        egészet formába öntjük. Ennek a módszernek a felhasználás szempontjából rengeteg előnye van:<br> A késztermékben
+        benne marad az elszappanosítási reakció során keletkezett glicerin. Ez teljesen természetes, növényi alapú glicerin,
+        hiszen közvetlenül a növényi zsiradékból keletkezik. Csodás hidratáló szer, amely megköti a levegőből a vizet, és
+        ezzel hidratálja a bőrünket.<br> A háziszappanokba gyakran több zsiradékot tesznek, mint amennyi az elszappanosításhoz
+        szükséges. Ez valódi testápolóként táplálja bőrünket.<br> A natúr háziszappan változatosabban adalékolható. Tehetünk
+        hozzá nagy mennyiségű (kecske) tejet, friss gyümölcsöket, magvakat, friss gyógynövényeket, bármit. És hogy mi a különbség
+        a használatkor? Hogy ezek a natúrszappanok tényleg ápolnak, hidratálnak, fertőtlenítenek és tisztítanak.
+      </div>
+      <div class="slideshow-container">
+        <div class="slideshow-text"> Üdvözöllek a Tündérkert szappan manufaktúra oldalán!</div>
+        <hr>
+        <img class="mySlides" src="images/Slide/1.jpg">
+        <img class="mySlides" src="images/Slide/2.jpg">
+        <img class="mySlides" src="images/Slide/3.jpg">
+        <img class="mySlides" src="images/Slide/4.jpg">
+        <img class="mySlides" src="images/Slide/5.jpg">
+        <img class="mySlides" src="images/Slide/6.jpg">
+        <img class="mySlides" src="images/Slide/7.jpg">
+        <img class="mySlides" src="images/Slide/8.jpg">
+        <img class="mySlides" src="images/Slide/9.jpg">
+        <img class="mySlides" src="images/Slide/10.jpg">
+        <img class="mySlides" src="images/Slide/11.jpg">
+        <img class="mySlides" src="images/Slide/12.jpg">
+        <img class="mySlides" src="images/Slide/13.jpg">
+        <br>
+      </div>
+    </div>
+    <div id="contact">
+      a manufaktúra elérhetőségei:<br><br> Cím: 6600 Szentes, Kiss Bálint utca 2.<br> Telefonszám: 0620/967-0017 <br> email-cím:
+      varga.emilia0@gmail.com<br><br>
+      <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+      <div style='overflow:hidden;height:440px;width:700px;'>
+        <div id='gmap_canvas' style='height:440px;width:700px;'></div>
+        <div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div>
+        <div><small><a href="https://webtrafficgeeks.org/">buy adsense safe traffic | webtrafficgeeks.org</a></small></div>
+        <style>
+          #gmap_canvas img {
+            max-width: none!important;
+            background: none!important
+          }
+        </style>
+      </div>
+      <script type='text/javascript'>
+                                                                                             function init_map() { var myOptions = { zoom: 10, center: new google.maps.LatLng(46.6530192, 20.256638100000032), mapTypeId: google.maps.MapTypeId.ROADMAP }; map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(46.6530192, 20.256638100000032) }); infowindow = new google.maps.InfoWindow({ content: '<strong>Title</strong><br>szentes kiss bálint utca 2<br>' }); google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker); } google.maps.event.addDomListener(window, 'load', init_map);
+      </script>
+    </div>
+    <div id="footer">
+    </div>
+  </div>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/slide-show.js"></script>
+  <script src="scripts/functions.js"></script>
+</body>
+
+</html>
